@@ -12,24 +12,24 @@ export default function Home({ articles, trending = null }) {
           See what&apos;s happening around the world
         </h1>
         <div className="flex">
-          <div className="flex flex-col w-2/3 ml-24 mr-20">
+          <div className="flex flex-col w-1/2 ml-24 mr-20">
             {articles.results.map((article, index) => (
               <article key={article.uid} className="mb-6">
-                <h2 className="bold text-3xl text-blue-600 cursor-pointer">
+                <h2 className="font-extrabold text-3xl text-red-900 cursor-pointer mb-3 mt-5">
                   <PrismicLink href={`/articles/${article.uid}`}>
                     <PrismicRichText field={article.data.title} />
                   </PrismicLink>
                 </h2>
 
                 <PrismicNextImage
-                  className="w-2/3 my-2"
+                  className="w-2/3 my-2 rounded-3xl"
                   field={article.data.featuredimage}
                 />
                 <PrismicRichText field={article.data.previewinfo} />
               </article>
             ))}
           </div>
-          <div className="flex flex-col w-1/3">
+          <div className="flex flex-col w-1/2">
             <h2 className="text-xl uppercase font-bold opacity-50 mb-5">
               See whats trending
             </h2>
@@ -38,7 +38,7 @@ export default function Home({ articles, trending = null }) {
                 key={trending.uid}
                 className="mb-4 pb-4 border-b border-t-gray-400 last:border-b-0"
               >
-                <h3 className="bold text-xl text-blue-600 cursor-pointer">
+                <h3 className="bold text-xl text-blue-700 cursor-pointer">
                   <PrismicLink href={`trending/${trending.uid}`}>
                     <PrismicRichText field={trending.data.headline} />
                   </PrismicLink>

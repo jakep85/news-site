@@ -1,5 +1,5 @@
 import { PrismicLink } from '@prismicio/react';
-import { GiAstronautHelmet } from 'react-icons/gi';
+import { BiNews } from 'react-icons/bi';
 import { FiSearch } from 'react-icons/fi';
 import { AiOutlineBell, AiOutlineUser } from 'react-icons/ai';
 import Head from 'next/head';
@@ -15,13 +15,13 @@ export default function Layout({ children }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="px-2 md:px-24 bg-black text-white flex justify-between h-16">
+      <header className="px-2 md:px-24 bg-slate-800 text-white flex justify-between h-16 border-b-4 border-red-900">
         <PrismicLink
           href={'/'}
           className="text-white uppercase text-2xl flex align-baseline px-10 my-auto"
         >
-          <GiAstronautHelmet className="inline text-4xl mr-4" />
-          News Site
+          <BiNews className="inline text-4xl mr-4" />
+          Global News
         </PrismicLink>
         <div className="flex items-center w-1/3 text-lg">
           <input
@@ -68,8 +68,8 @@ export default function Layout({ children }) {
             href={'/'}
             className="text-white uppercase text-2xl flex align-baseline px-10 my-auto"
           >
-            <GiAstronautHelmet className="inline text-4xl mr-4" />
-            News Site
+            <BiNews className="inline text-4xl mr-4" />
+            Global News
           </PrismicLink>
         </div>
         <div className="grid grid-cols-3 grid-rows-3 gap-5 mt-10 max-w-3xl">
@@ -98,14 +98,14 @@ export default function Layout({ children }) {
             Vision
           </PrismicLink>
           <PrismicLink href={'./'} className="text-xl text-white">
-            Project VisQ
+            Project Funding
           </PrismicLink>
         </div>
         <div>
           <p className="my-10 text-sm max-w-2xl">
-            News Site is an open-media initiative by Xmedia Gcorp, US &copy; and
-            is registered as not for profit organization. All right reserved.
-            &copy; {new Date().getFullYear()}
+            Global News is an open-media initiative by TheNewsCorp, US &copy;
+            and is registered as not for profit organization. All right
+            reserved. &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>
