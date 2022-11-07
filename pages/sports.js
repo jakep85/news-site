@@ -16,7 +16,7 @@ export default function Sports({ articles, trending }) {
             {articles.results.map((article, index) => (
               <article key={article.uid} className="mb-6">
                 <h2 className="bold text-3xl text-blue-600 cursor-pointer">
-                  <PrismicLink href={`articles/${article.uid}`}>
+                  <PrismicLink href={`/articles/${article.uid}`}>
                     <PrismicRichText field={article.data.title} />
                   </PrismicLink>
                 </h2>
