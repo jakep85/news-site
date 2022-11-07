@@ -1,7 +1,7 @@
 import * as prismicH from '@prismicio/helpers';
-import { PrismicText, PrismicRichText } from '@prismicio/react';
+import { PrismicLink, PrismicText, PrismicRichText } from '@prismicio/react';
+import { PrismicNextImage } from '@prismicio/next';
 import Layout from '../../components/Layout';
-import Link from 'next/link';
 import { createClient, linkResolver } from '../../prismicio';
 
 const Article = ({ article }) => {
@@ -11,21 +11,21 @@ const Article = ({ article }) => {
         <h1 className="text-3xl uppercase font-bold opacity-50 my-10">
           <PrismicText field={article.data.title} />
         </h1>
-        <img
+        <PrismicNextImage
           className="shadow-xl mb-20"
-          src={article.data.featuredimage.url}
+          field={article.data.featuredimage}
           alt={article.data.featuredimage.alt}
         />
         <div className="text-lg opacity-75 [&>p]:mb-4">
           <PrismicRichText field={article.data.fullArticle} />
         </div>
-        <Link
+        <PrismicLink
           href={'/'}
           role="button"
           className="bg-black text-white py-3 px-10"
         >
           Back to home
-        </Link>
+        </PrismicLink>
       </div>
     </Layout>
   );

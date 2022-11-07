@@ -1,21 +1,12 @@
 import Prismic from 'prismic-javascript';
-import Head from 'next/head';
-import { PrismicRichText } from '@prismicio/react';
+import { PrismicLink, PrismicRichText } from '@prismicio/react';
+import { PrismicNextImage } from '@prismicio/next';
 import Layout from '../components/Layout';
-import Link from 'next/link';
 import { Client } from '../prismic-configuration';
 
 export default function Business({ articles, trending }) {
   return (
     <div>
-      <Head>
-        <title>News Site: Business</title>
-        <meta
-          name="description"
-          content="New site related to business, politics and sports"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Layout>
         <h1 className="text-2xl uppercase font-bold opacity-50 my-10 ml-24">
           See what's happening around the world in Business
@@ -25,14 +16,14 @@ export default function Business({ articles, trending }) {
             {articles.results.map((article, index) => (
               <article key={article.uid} className="mb-6">
                 <h2 className="bold text-3xl text-blue-600 cursor-pointer">
-                  <Link href={`articles/${article.uid}`}>
+                  <PrismicLink href={`articles/${article.uid}`}>
                     <PrismicRichText field={article.data.title} />
-                  </Link>
+                  </PrismicLink>
                 </h2>
 
-                <img
+                <PrismicNextImage
                   className="w-2/3 my-2"
-                  src={article.data.featuredimage.url}
+                  field={article.data.featuredimage}
                   alt=""
                 />
                 <PrismicRichText field={article.data.previewinfo} />
@@ -49,9 +40,9 @@ export default function Business({ articles, trending }) {
                 className="mb-4 pb-4 border-b border-t-gray-400 last:border-b-0"
               >
                 <h3 className="bold text-xl text-blue-600 cursor-pointer">
-                  <Link href={`trending/${trending.uid}`}>
+                  <PrismicLink href={`trending/${trending.uid}`}>
                     <PrismicRichText field={trending.data.headline} />
-                  </Link>
+                  </PrismicLink>
                 </h3>
               </article>
             ))}

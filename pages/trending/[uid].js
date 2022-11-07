@@ -1,7 +1,6 @@
 import * as prismicH from '@prismicio/helpers';
-import { PrismicText, PrismicRichText } from '@prismicio/react';
+import { PrismicLink, PrismicText, PrismicRichText } from '@prismicio/react';
 import Layout from '../../components/Layout';
-import Link from 'next/link';
 import { createClient, linkResolver } from '../../prismicio';
 
 const Trending = ({ trending }) => {
@@ -14,13 +13,13 @@ const Trending = ({ trending }) => {
         <div className="text-lg opacity-75 [&>p]:mb-4">
           <PrismicRichText field={trending.data.info} />
         </div>
-        <Link
+        <PrismicLink
           href={'/'}
           role="button"
           className="bg-black text-white py-3 px-10"
         >
           Back to home
-        </Link>
+        </PrismicLink>
       </div>
     </Layout>
   );

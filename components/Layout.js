@@ -1,19 +1,28 @@
-import Link from 'next/link';
+import { PrismicLink } from '@prismicio/react';
 import { GiAstronautHelmet } from 'react-icons/gi';
 import { FiSearch } from 'react-icons/fi';
 import { AiOutlineBell, AiOutlineUser } from 'react-icons/ai';
+import Head from 'next/head';
 
 export default function Layout({ children }) {
   return (
     <div>
+      <Head>
+        <title>News Site: Business</title>
+        <meta
+          name="description"
+          content="New site related to business, politics and sports"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <header className="px-2 md:px-24 bg-black text-white flex justify-between h-16">
-        <Link
+        <PrismicLink
           href={'/'}
           className="text-white uppercase text-2xl flex align-baseline px-10 my-auto"
         >
           <GiAstronautHelmet className="inline text-4xl mr-4" />
           News Site
-        </Link>
+        </PrismicLink>
         <div className="flex items-center w-1/3 text-lg">
           <input
             type="text"
@@ -27,70 +36,70 @@ export default function Layout({ children }) {
         </div>
       </header>
       <nav className="px-2 md:px-24 bg-white flex border-b border-black">
-        <Link
+        <PrismicLink
           href={'/'}
           className="mr-10 text-xl mt-5 px-5 border-b-2 border-transparent hover:border-black"
         >
           Home
-        </Link>
-        <Link
+        </PrismicLink>
+        <PrismicLink
           href={'/politics'}
           className="mr-10 text-xl mt-5 px-5 border-b-2 border-transparent hover:border-black"
         >
           Politics
-        </Link>
-        <Link
+        </PrismicLink>
+        <PrismicLink
           href={'/business'}
           className="mr-10 text-xl mt-5 px-5 border-b-2 border-transparent hover:border-black"
         >
           Business
-        </Link>
-        <Link
+        </PrismicLink>
+        <PrismicLink
           href={'/sports'}
           className="mr-10 text-xl mt-5 px-5 border-b-2 border-transparent hover:border-black"
         >
           Sports
-        </Link>
+        </PrismicLink>
       </nav>
       {children}
       <div className="bg-black text-white text-xl py-10 px-24 flex flex-col">
         <div className="">
-          <Link
+          <PrismicLink
             href={'/'}
             className="text-white uppercase text-2xl flex align-baseline px-10 my-auto"
           >
             <GiAstronautHelmet className="inline text-4xl mr-4" />
             News Site
-          </Link>
+          </PrismicLink>
         </div>
         <div className="grid grid-cols-3 grid-rows-3 gap-5 mt-10 max-w-3xl">
-          <Link href={'./'} className="text-xl text-white">
+          <PrismicLink href={'./'} className="text-xl text-white">
             Careers
-          </Link>
-          <Link href={'./'} className="text-xl text-white">
+          </PrismicLink>
+          <PrismicLink href={'./'} className="text-xl text-white">
             About Us
-          </Link>
-          <Link href={'./'} className="text-xl text-white">
+          </PrismicLink>
+          <PrismicLink href={'./'} className="text-xl text-white">
             API
-          </Link>
-          <Link href={'./'} className="text-xl text-white">
+          </PrismicLink>
+          <PrismicLink href={'./'} className="text-xl text-white">
             Media
-          </Link>
-          <Link href={'./'} className="text-xl text-white">
+          </PrismicLink>
+          <PrismicLink href={'./'} className="text-xl text-white">
             Contact Us
-          </Link>
-          <Link href={'./'} className="text-xl text-white">
+          </PrismicLink>
+          <PrismicLink href={'./'} className="text-xl text-white">
             Privacy Policy
-          </Link>
-          <Link href={'./'} className="text-xl text-white">
+          </PrismicLink>
+          <PrismicLink href={'./'} className="text-xl text-white">
             Partners
-          </Link>
-          <Link href={'./'} className="text-xl text-white">
+          </PrismicLink>
+          <PrismicLink href={'./'} className="text-xl text-white">
             Vision
-          </Link>
-          <Link href={'./'} className="text-xl text-white">
+          </PrismicLink>
+          <PrismicLink href={'./'} className="text-xl text-white">
             Project VisQ
-          </Link>
+          </PrismicLink>
         </div>
         <div>
           <p className="my-10 text-sm max-w-2xl">
