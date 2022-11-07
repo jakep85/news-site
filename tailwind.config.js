@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./components/**/*.js', './pages/**/*.js'],
+  purge: false,
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -10,10 +10,5 @@ module.exports = {
   variants: {
     borderColor: ['hover', 'focus'],
   },
-  plugins: [
-    'postcss-import',
-    'tailwindcss',
-    'autoprefixer',
-    ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
-  ],
+  plugins: ['postcss-import', 'tailwindcss', 'autoprefixer'],
 };
