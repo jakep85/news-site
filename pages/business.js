@@ -9,7 +9,7 @@ export default function Business({ articles, trending }) {
     <div>
       <Layout>
         <h1 className="text-2xl uppercase font-bold opacity-50 my-10 ml-24">
-          See what's happening around the world in Business
+          See what&apos;s happening around the world in Business
         </h1>
         <div className="flex">
           <div className="flex flex-col w-2/3 ml-24 mr-20">
