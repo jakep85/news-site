@@ -5,11 +5,11 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import { Client } from '../prismic-configuration';
 
-export default function Home({ articles, trending = null }) {
+export default function Business({ articles, trending }) {
   return (
     <div>
       <Head>
-        <title>News Site</title>
+        <title>News Site: Business</title>
         <meta
           name="description"
           content="New site related to business, politics and sports"
@@ -18,7 +18,7 @@ export default function Home({ articles, trending = null }) {
       </Head>
       <Layout>
         <h1 className="text-2xl uppercase font-bold opacity-50 my-10 ml-24">
-          See what's happening around the world
+          See what's happening around the world in Business
         </h1>
         <div className="flex">
           <div className="flex flex-col w-2/3 ml-24 mr-20">
@@ -66,7 +66,7 @@ export default function Home({ articles, trending = null }) {
 
 export async function getServerSideProps() {
   const articles = await Client().query(
-    Prismic.Predicates.at('document.type', 'article')
+    Prismic.Predicates.at('document.tags', ['business'])
   );
 
   const trending = await Client().query(

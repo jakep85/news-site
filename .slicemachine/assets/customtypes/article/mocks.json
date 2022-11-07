@@ -1,0 +1,46 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "article",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "heading2",
+        "text": "Automobile",
+        "spans": []
+      }
+    ],
+    "datetime": "2014-06-28",
+    "previewinfo": [
+      {
+        "type": "paragraph",
+        "text": "Excepteur duis velit ea sint labore et exercitation incididunt ipsum magna non eu commodo. Cillum fugiat sunt ipsum reprehenderit ea sunt duis ullamco occaecat quis. Eiusmod officia amet est laboris minim deserunt id commodo laboris ex veniam anim.",
+        "spans": []
+      }
+    ],
+    "fullArticle": [
+      {
+        "type": "paragraph",
+        "text": "Eiusmod minim consequat laboris nisi enim fugiat esse tempor ea duis duis consequat culpa occaecat consectetur.",
+        "spans": []
+      }
+    ],
+    "featuredimage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+    }
+  }
+}
