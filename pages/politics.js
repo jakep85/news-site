@@ -15,7 +15,7 @@ export default function Politics({ articles, trending }) {
           <div className="flex flex-col w-2/3 ml-24 mr-20">
             {articles.results.map((article, index) => (
               <article key={article.uid} className="mb-6">
-                <h2 className="bold text-3xl text-blue-600 cursor-pointer">
+                <h2 className="font-extrabold text-3xl text-red-900 cursor-pointer mb-3 mt-5">
                   <PrismicLink href={`/articles/${article.uid}`}>
                     <PrismicRichText field={article.data.title} />
                   </PrismicLink>
@@ -39,7 +39,7 @@ export default function Politics({ articles, trending }) {
                 key={trending.uid}
                 className="mb-4 pb-4 border-b border-t-gray-400 last:border-b-0"
               >
-                <h3 className="bold text-xl text-blue-600 cursor-pointer">
+                <h3 className="bold text-xl text-blue-700 cursor-pointer">
                   <PrismicLink href={`trending/${trending.uid}`}>
                     <PrismicRichText field={trending.data.headline} />
                   </PrismicLink>
