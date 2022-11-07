@@ -1,0 +1,39 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "test",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Tonight",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Incididunt non id esse consequat ullamco ipsum adipisicing laboris minim tempor reprehenderit ipsum.",
+        "spans": []
+      }
+    ],
+    "published": "2014-07-25",
+    "featuredimage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f"
+    }
+  }
+}
