@@ -10,5 +10,5 @@ module.exports = {
   variants: {
     borderColor: ['hover', 'focus'],
   },
-  plugins: ['postcss-import', 'tailwindcss', 'autoprefixer'],
+  plugins: [],
 };
